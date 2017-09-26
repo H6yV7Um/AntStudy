@@ -7,7 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:springtest.xml")
+@ContextConfiguration("classpath:springtesttransaction.xml")
 public class testTransactionalTestService {
 	@Autowired
 	private TransactionalTestService tts;
@@ -15,6 +15,11 @@ public class testTransactionalTestService {
 	@Test
 	public void test() {
 		tts.addTransactionalTest();
+	}
+
+	@Test
+	public void test1() {
+		tts.getTransactionalTest();
 	}
 
 }

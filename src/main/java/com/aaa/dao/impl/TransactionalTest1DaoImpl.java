@@ -1,5 +1,8 @@
 package com.aaa.dao.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
@@ -17,9 +20,19 @@ public class TransactionalTest1DaoImpl extends HibernateDaoSupport implements Tr
 	}
 
 	@Override
+
 	public String addTransactionalTest1(TransactionalTest1 transactionalTest1) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().save(transactionalTest1).toString();
+		this.getHibernateTemplate().save(transactionalTest1).toString();
+		int i = 100 / 0;
+		return "";
 	}
 
+	@Override
+	public List<TransactionalTest1> getTransactionalTest1() {
+		// TODO Auto-generated method stub
+		List<TransactionalTest1> transactionalList = new ArrayList<TransactionalTest1>();
+		transactionalList = this.getHibernateTemplate().loadAll(TransactionalTest1.class);
+		return transactionalList;
+	}
 }
