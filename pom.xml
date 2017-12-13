@@ -8,9 +8,9 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<spring.version>5.0.0.RELEASE</spring.version>
-		<mysql-connector-java_version>5.1.44</mysql-connector-java_version>
-		<hibernate.version>5.2.11.Final</hibernate.version>
+		<spring.version>5.0.2.RELEASE</spring.version>
+		<mysql-connector-java_version>5.1.45</mysql-connector-java_version>
+		<hibernate.version>5.2.12.Final</hibernate.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
@@ -231,7 +231,16 @@
 			<scope>system</scope>
 			<systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
 		</dependency>
-
+		<dependency>
+			<groupId>com.belerweb</groupId>
+			<artifactId>pinyin4j</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.tensorflow</groupId>
+			<artifactId>tensorflow</artifactId>
+			<version>1.4.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>as</finalName>

@@ -1,5 +1,3 @@
-import static org.junit.Assert.*;
-
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -24,8 +22,8 @@ public class testClipboard1 {
 		Clipboard sysClip = Toolkit.getDefaultToolkit().getSystemClipboard();
 		try {
 			Robot r = new Robot();
-			for(int i=0;i<10000;i++){
-				Transferable tText = new StringSelection("你是谁呀!!"+i);
+			for(int i=0;i<100;i++){
+				Transferable tText = new StringSelection(i+"你在哪逛呢?");
 				sysClip.setContents(tText, null);
 				r.keyPress(KeyEvent.VK_CONTROL);
 				r.keyPress(KeyEvent.VK_V);
