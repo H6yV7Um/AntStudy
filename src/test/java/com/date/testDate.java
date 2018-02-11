@@ -70,4 +70,10 @@ public class testDate {
 		System.out.println(sdf.format(new Date()));
 
 	}
+	
+	@Test
+	public void tt3(){
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+		System.out.println(sdf.format(new Date()));
+	}
 }
