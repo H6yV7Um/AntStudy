@@ -8,9 +8,9 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<spring.version>5.0.2.RELEASE</spring.version>
-		<mysql-connector-java_version>5.1.45</mysql-connector-java_version>
-		<hibernate.version>5.2.12.Final</hibernate.version>
+		<spring.version>5.0.5.RELEASE</spring.version>
+		<mysql-connector-java_version>5.1.46</mysql-connector-java_version>
+		<hibernate.version>5.2.16.Final</hibernate.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
@@ -56,6 +56,11 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.3.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.5.5</version>
 		</dependency>
 
 		<dependency>
@@ -240,6 +245,16 @@
 			<groupId>org.tensorflow</groupId>
 			<artifactId>tensorflow</artifactId>
 			<version>1.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
+			<version>5.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>1.8.13</version>
 		</dependency>
 	</dependencies>
 	<build>

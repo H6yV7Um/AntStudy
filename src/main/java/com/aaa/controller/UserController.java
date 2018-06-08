@@ -1,10 +1,9 @@
 package com.aaa.controller;
 
-import java.util.Properties;
 
 import javax.annotation.Resource;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,16 +16,15 @@ import com.aaa.service.UserService;
 @Controller
 @RequestMapping("/User")
 public class UserController {
-	@Autowired
-	private Properties configs;
+	@Value("#{myconfig.TEMPORARY_STORE_DIR}")
+	private String store_dir;
+	
 	@Resource
 	private UserService userService;
 
 	@RequestMapping("openPage/{dest}/")
 	public String openPage(@PathVariable String dest) {
-
-		String m = configs.getProperty("conf.TEMPORARY_STORE_DIR").toString();
-		System.out.println(m);
+		System.out.println(store_dir);
 		return dest;
 	}
 

@@ -20,7 +20,7 @@ public class testURLget {
 	public void test() {
 		String url = "http://bdp.jd.com/api/urm/v2/user/findByErp?appId=bdp.jd.com&token=RQLMPXULF3EG23CPZL3U257B7Y&time=11111111111&data=";
 		try {
-			url=url+URLEncoder.encode("{\"erp\":\"aa\"}", "utf-8");
+			url=url+URLEncoder.encode("{\"erp\":\"guowenwei\"}", "utf-8");
 		} catch (UnsupportedEncodingException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -45,5 +45,4 @@ public class testURLget {
 			e.printStackTrace();
 		}
 	}
-
 }

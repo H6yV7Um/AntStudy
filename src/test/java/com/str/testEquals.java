@@ -13,5 +13,11 @@ public class testEquals {
 		System.out.println("aa".equals(bb));
 		System.out.println(obj.equals("aa"));
 	}
+	
+	@Test
+	public void test1(){
+		String b="aa,bb,cc,dd";
+		System.out.println((b+",").indexOf("cb"));
+	}
 
 }

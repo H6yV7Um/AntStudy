@@ -10,13 +10,10 @@ public class testFileMove {
 
 	@Test
 	public void test() {
-		File file=new File("E:\\aaa\\ss.txt");
-		try {
-			FileOutputStream fileout =new FileOutputStream(file);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}  
+		File file = new File("E:\\myfile\\timg.jpg");
+		//file.renameTo(new File("E:\\timg.jpg"));
+		System.out.println(new File(file.getParent()).getParent());
+		System.out.println(file.getName());
 	}
 
 }

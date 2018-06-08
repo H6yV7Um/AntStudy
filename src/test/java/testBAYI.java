@@ -12,7 +12,7 @@ public class testBAYI {
 
 	@Test
 	public void test() {
-		String num = "9273423";
+		String num = "110003521174";
 		String[] nar = num.split("|");
 		int s = 0;
 		for (String a : nar) {

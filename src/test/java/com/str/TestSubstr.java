@@ -17,5 +17,12 @@ public class TestSubstr {
 		String stock="abcdefdg";
 		System.out.println(stock.substring(0, stock.lastIndexOf("d")+1));
 	}
+	
+	@Test
+	public void test2(){
+		for(int i=0;i<4;i++){
+			System.out.println("aa"+i);
+		}
+	}
 
 }
